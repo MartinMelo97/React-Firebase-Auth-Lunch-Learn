@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
 import useFirebase from '../../hooks/useFirebase'
 
@@ -26,7 +27,7 @@ const Navbar = () => {
           </div>
           <button onClick={logout} style={{ backgroundColor: '#fff', border: 'none', padding: '10px', marginRight: '20px' }}>Cerrar sesión</button>
         </>
-        : <p style={{ color: '#fff', marginRight: '20px' }}>Iniciar sesión</p>}
+        : <Link to='login' style={{ color: '#fff', marginRight: '20px' }}>Iniciar sesión</Link>}
     </div>
   )
 }
